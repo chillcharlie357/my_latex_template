@@ -2,19 +2,22 @@
 
 男大学生自用99新latex模板。
 
-\subsection{文献引用}
+\section{文献引用}
 
 文献引用\cite[text]{example-bib}
+
+\subsection{一级子目录}
+
+ababab
 
 \subsubsection{二级子目录}
 
 ababab
 
+\section{插入代码}
 
-\subsection{插入代码}
 
-
-\subsubsection{直接嵌入代码块}
+\subsection{直接嵌入代码块}
 
 \begin{lstlisting}
     <dependency>
@@ -24,7 +27,7 @@ ababab
 \end{lstlisting}
 
 
-\subsubsection{引用外部代码文件}
+\subsection{引用外部代码文件}
 
 \lstinputlisting[
     style=file,
@@ -33,15 +36,15 @@ ababab
 ]{files/example/AdminServiceApplication.java}
 
 
-\subsection{插入图片}
+\section{插入图片}
 
-\subsubsection{使用{includegraphics}}
+\subsection{使用{includegraphics}}
 
 
 \includegraphics[width=0.9\linewidth]{figures/example.png}
 
 
-\subsubsection{使用{subfig}}
+\subsection{使用{subfig}}
 
 subfig宏包：subfig宏包属于subfloat宏包系列，提供了创建并排子图的功能。
 使用该宏包，您可以在一个浮动环境（如figure）中排列多个子图，并为每个子图添加标题和标签
@@ -63,4 +66,22 @@ Figure \ref{fig:subfig-example} has two sub-figures, fig. \ref{Fig.sub.1} \& \re
     \label{fig:subfig-example}
 \end{figure}
 
+\section{伪代码}
 
+
+\begin{algorithm}
+    \caption{示例算法}\label{alg:example}
+    \begin{algorithmic}[1]
+    \Procedure{ExampleProcedure}{}
+    \State $x \gets 0$
+    \While{$x < 10$}
+        \State $x \gets x + 1$
+        \If{$x$ is even}
+            \State \textbf{print} ``$x$ is even''
+        \Else
+            \State \textbf{print} ``$x$ is odd''
+        \EndIf
+    \EndWhile
+    \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
